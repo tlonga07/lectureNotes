@@ -279,6 +279,8 @@ parse trees
 
 --> draw one for (p ∧ q) → ¬r
 
+root is top-lvl operator
+
 --> how do they relate to programming?
 
 --> what is the "top-level operator" here?
@@ -337,20 +339,24 @@ Contingent, contradictory, tautology
 
 
 
-contingent: 
+contingent: can be either false or true
+
+    Example? 
+        p And q
+
+
+
+contradictory: always false
+
+    Example? 
+        p And Not p
+
+
+tautology: always true
 
     Example? 
 
-
-
-contradictory:
-
-    Example? 
-
-
-tautology:
-
-    Example? 
+        p Or Not p
     
 
 ///////////////////////////////////////////
