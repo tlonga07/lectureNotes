@@ -1,0 +1,72 @@
+//Homework 1
+//2_puzzles.txt
+
+On the island of Knights and Knaves, every inhabitant is either a knight or a knave.
+Knights always tell the truth, and knaves always lie.
+
+
+////////////////////////////////////
+
+5) You see inhabitants Gabe, Harry, and Caitlin.
+
+Gabe says: All three of us are knaves.
+Caitlin says: Exactly one of us is a knight.
+(Harry doesn't say anything.)
+
+//type your solution (knight or knave) next to each question
+What type is Gabe? Knave
+What type is Harry? Knave 
+What type is Caitlin? Knight
+
+//Explain your reasoning below. Why is your answer the ONLY one that works?
+My answer works because Gabe can't be a knight because if he was his statement that all 3 are 
+knaves is untrue and knights cant lie. This means at least 1 of them is a kight.
+Caitlyn makes the statement that exactly one of them is a knight. If she was a knight and this was 
+true, all conditions would be satisfied. If she was a knave, this statement would be a lie, which would
+be contridictory becuase there would be only one knight in Harry and she should be a liar so there should be 
+2 knights. 
+
+
+////////////////////////////////////
+
+6) You see inhabitants Gabby, Lewis, and Ellie.
+
+Gabby says: Lewis and I are both knights. 
+Lewis says: Ellie would say I am a knight. 
+Ellie says: Either I am a knight or Lewis is a knight, but not both of us. 
+
+//type your solution (knight or knave) next to each question
+What type is Gabby? Knave 
+What type is Lewis? Knave
+What type is Ellie? Knight 
+
+//Explain your reasoning below. Why is your answer the ONLY one that works?
+If Gabby is a knave, then Lewis would either knave or knight. If ellie was a knight, lewis would be a knave.
+if lewis was a knave, hed lie and say ellie would say he's a knight, which ellie wouldnt do because shes a knight, and that
+would be a lie. 
+
+
+
+///////////////////////////////////
+
+7) Your award-winning koi fish was stolen from your pond. You know the thief was either Agatha, Ferdinand, or Carl.
+
+       Agatha says: "Don't look at me! I didn't steal your oversized goldfish." T 
+       Carl says: "Me either! I prefer turtles anyway." F 
+       Then you ask Ferdinand, "Did Agatha and Carl tell the truth?"
+       Ferdinand replies, "At least one of them did."  T
+
+   You later learn that Carl and Ferdinand were not both telling the truth. (Careful -- this is a different statement
+   than "Carl and Ferdinand were both not telling the truth".)
+
+   Carl or Ferdinand werent telling truth or BOTH werent telling truth
+
+
+   --> Who stole your koi? Explain your answer.
+   Carl.
+
+   Eiher Carl or Ferdinand or both have to lie, they cannot both tell truth. If Ferdinand is telling truth
+   Carl must be lying and Agatha must be telling truth since either one or both is telling truth. 
+
+   If ferdinand lied then both agatha and carl would be lying because his statement at least one wwas telling truth
+   would be negated. There can only be one theif. 

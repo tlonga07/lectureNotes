@@ -1,0 +1,95 @@
+//Homework 1
+//1_logic.txt
+
+////////////////////////////////////
+
+1) Suppose we know the following premises:
+
+    - If you dont change your password, youll get locked out of the lab computers. 
+    - You don't get locked out of the lab computers.
+
+
+What conclusion, if any, can we draw from our premises? Explain.
+
+--> Type your conclusion below
+
+    I can conclude that i didnt change my password. 
+
+
+////////////////////////////////////
+
+2) Suppose we know the following premises:
+
+    - You'll stop eating at Chipotle if they raise their prices.
+
+    - Chipotle doesn't raise their prices
+
+
+What conclusion, if any, can we draw from our premises? Explain.
+
+--> Type your conclusion below
+
+I cannot conclude anything from the premises, as i may stop eating at chipotle for other reasons. 
+
+
+
+///////////////////////////////////
+
+3) Suppose we have the following code fragment:
+
+        x = 5;
+        if (a > 0) {
+            x = 7;
+            if (a % 2 == 1) {
+                y = 14;
+            }
+        }
+
+Just after the code fragment finishes, suppose we know that x is 7 but that y is NOT 14.
+What can we conclude about a? Explain.
+
+--> Type your conclusion below
+
+We know that a is bigger than 0, is an integer, and an even number. This is because x changed,
+which only wouldve happened if a was bigger than 0. Y didnt change, which it would have if a was odd.  
+
+
+
+
+
+////////////////////////////////////
+
+4) Suppose we have the following code fragment:
+
+    y = 0;
+    if (a > 10 && a < 20) {
+        x = 20;
+    }
+    else {
+        if (a > 10) {
+            y = 17;
+        }
+    }
+
+Part 1: Just after the code fragment finishes, suppose we know that y is 17 but that x is NOT 20.
+What can we conclude about a? Explain.
+
+--> Type your conclusion below
+
+We can conclude that a is bigger than 10 but not smaler than 20. We know y changed, and that is contingent on
+a being bigger than 10. We know if a where smaller than 20 as well than x would be 20, which it isnt. 
+
+
+
+
+
+///
+
+Part 2: What if the statement "y = 0;" was removed from the beginning of the code fragment. Would
+that affect what we could conclude in Part 1 (if we still knew that y was 17 and that x was not 20
+just after the code fragment finishes)? Explain.
+
+--> Type your conclusion below
+
+All we could conclude is that a was not bigger than a AND smaller than 20, since x would be 20, which it isnt. 
+We couldnt conclude that x > 10 because y mightve already been 17. Knowledge of y's previous state matters. 
