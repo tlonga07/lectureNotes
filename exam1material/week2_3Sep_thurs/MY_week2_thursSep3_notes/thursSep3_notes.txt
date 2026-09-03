@@ -64,6 +64,12 @@ Propositional logic.
 - a set of propositional atoms (statements that can be T/F)
     --> these will be our boolean variables in logic statements
 
+atoms should be minimal/broken down as much as possible 
+dont do something like
+p = i am hungry and i am thirsty
+better to do 
+q = i am hungry q equals i am thursty (p & q)
+
 
 
 - connected by logical operators
@@ -79,22 +85,22 @@ Propositional logic.
 
 Which ones are propositions?
 
-Today is Thursday.
+Today is Thursday. yes
 
 
-What time is it?
+What time is it? no
 
 
-x == 2
+x == 2 yes
 
 
-Pigs can fly.
+Pigs can fly. yes
 
 
-Drive carefully.
+Drive carefully. no
 
 
-y <= 4
+y <= 4 yes
 
 
 
@@ -109,17 +115,17 @@ Suppose we have these propositional atoms:
 
 How would we express these as English sentences/conditions?
 
-    ¬p:
+    ¬p: It is not below freesing
 
-    p ∧ q:
+    p ∧ q: It is below freezing and it is snowing
 
-    p → q :
+    p → q : The fact it is below freezing implies that it is snowing. 
 
-    ¬p → ¬q:
+    ¬p → ¬q: If it isnt below freezing that implies it is not snowing
 
-    r ∨ s:
+    r ∨ s: (y is smaller than or equal to four) OR (x is equal to 2)
 
-    ¬r:
+    ¬r: y is not smaller than or equal to 4 // y is greater than for
 
 
 ////////////////////////////////////////
@@ -133,15 +139,25 @@ the prerequisite or the course is full.
 
 
 --> what are the propositional atoms?
+x = you can enroll for the course
+y = you have taken prerequisite
+z = the course is full 
 
 
 
 
 --> translate to propositional logic:
+(!y v z) ->: !x 
 
 
 
-What is the *contrapositive* of our statement?
+What is the *contrapositive* of our statement? //statement flipped and negated
+
+p -> q has a contrapositve of !q -> !p 
+
+(!y v z) ->: !x
+has contripositve
+x ->: (y & !z)
 
 
 
@@ -161,10 +177,16 @@ if (x <= 2 || y >= 0) {
 }
 
 Propositional atoms?
+p: x <= 2
+q: y >= 0 
+r: z == 17
+s: answer == 25 //PROMISE of if this happens then THIS happens
 
 
 
 Translation? (if ... then ...)
+
+(p V q) & !r ->: s 
 
 
 
@@ -179,9 +201,16 @@ q: I can drive a car
 
 1) If I am at least 16 years old, then I can drive a car.
 
+p -> q
+
+only false: 
+p: T (I am at least 16)
+q: F (I can't drive)
 
 
 2) I'm not at least 16 years old or I can drive a car.
+
+!p V q
 
 
 
@@ -205,28 +234,34 @@ q: I can drive a car
 
 1) If I am at least 16 years old, then I can drive a car.
 
-
+p -> q
 
 
 2) If I can drive a car, then I am at least 16 years old.
 
-
+q -> p 
 
 --> are they saying the same thing?
-
+no 
 
 --> could we PROVE our answer?
+find ONE truth assignemnt that makes one true and the other false 
 
-
+p: T, q: F
 //////////////////////////////////
 
 Summary of equivalence.
 
+
 How do we prove two statements ARE equivalent?
 
+Consider and prove all inputs equate to same output.
+complete two truth tables
 
 
 How do we prove two statements are NOT equivalent?
+
+find at least ONE truth assignment where outputs are different (true vs false)
 
 
 
@@ -270,17 +305,19 @@ How could we express the NEGATION
 
 DeMorgan's laws in propositional logic:
 
-¬(p ∨ q) is equivalent to... 
+¬(p ∨ q) is equivalent to... -p & !q 
 
 
 
-¬(p ∧ q) is equivalent to... 
+¬(p ∧ q) is equivalent to... !p V !q
 
 
 ////////////////////////
 
 --> how can we prove the first of DeMorgan's laws?
 (demorgan1.logika and demorgan2.logika)
+
+equivalent because every possible truth assignment leads to the same output for both statements 
 
 
 
