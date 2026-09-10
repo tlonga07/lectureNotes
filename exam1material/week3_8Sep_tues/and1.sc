@@ -13,11 +13,20 @@ import org.sireum.justification.natded.prop._
         (a & b, c) |- (b & c)
         Proof(
             //PROOF GOES HERE
-            1 ( a & b ) by Premise,
+<<<<<<< Updated upstream
+            1 ( a && b ) by Premise,
             2 ( c ) by Premise,
             3 ( a ) by AndE1(1),
             4 ( b ) by AndE2(1),
             5 ( b & c ) by AndI(4, 2)
+=======
+            1 ( a && b ) by Premise,
+            2 ( c ) by Premise,
+            3 ( a ) by AndE1(1),
+            4 ( b ) by AndE2(1),
+            5 ( b && c) by ANDI(4, 2)
+            
+>>>>>>> Stashed changes
         )
     )
 }

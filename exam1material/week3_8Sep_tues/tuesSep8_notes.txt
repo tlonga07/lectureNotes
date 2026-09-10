@@ -39,6 +39,7 @@ Satisfiability.
 
 
 
+
 - what kind of statement is satisfiable? what kind is not?
     satisfiable: tautology, contingent
     not satisfiable: contradictory
@@ -161,14 +162,21 @@ valid: every truth assignment that made all premises true
 
 Format for a truth table proof:
 
-             (mark * for each premise/conclusion)
+           *     *     *          *
 --------------------------------------------------------------
-variables # (premise1, premise2, ..., premiseN) ⊢ conclusion
+p q r # (p v q, !q, p ->: r) ⊢ r && p 
 ---------------------------------------------------------------
-... fill in like a truth table for each premise and conclusion
+T T T #    T     F     T          T
+T T F #    T     F     F          F
+T F T #    T     T     T          T
+T F F #    T     T     F          F
+F T T #    T     F     T          F
+F T F #                           F
+F F T #    F     T     F          F
+F F F #
 ---------------------------------------------------------------
 
-Valid [T assigns where all premises T - conclusion should also be T]
+Valid [T F T]
 
 
 
@@ -266,7 +274,7 @@ Downside of proofs with truth tables?
 
 
 
-
+Can get ridiculously long 
 
 
 ////////////////////////////
