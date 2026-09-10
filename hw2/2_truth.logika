@@ -1,0 +1,15 @@
+//Homework 2
+//2_truth.logika
+
+//Complete the truth table below
+//Use * to mark the top-level operator
+//After the truth table, list the formula as either tautology, contingent, or contradictory
+
+//When you are done, do a Logika check (Ctrl-Shift-W on Windows, Command-Shift-W on Mac).
+//You should get the message "Logika verified".
+
+                *
+-----------------------------
+p q r # (p & q) ->: !(r | q)
+-----------------------------
+

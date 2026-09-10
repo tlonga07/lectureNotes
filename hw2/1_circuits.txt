@@ -1,0 +1,32 @@
+//Homework 2
+//1_circuits.txt
+
+
+Circuit problem 1:
+
+Draw a picture (as described below) of the following circuit:
+
+(NOT p OR q) AND (NOT p AND NOT q)
+
+
+
+
+
+Circuit problem 2:
+
+Draw a picture (as described below) of the following circuit:
+
+NOT p AND NOT q AND NOT r
+
+
+
+
+Instructions to include your circuits:
+
+Draw BOTH circuits on the same paper or using a drawing tool. Label which circuit
+is which. Create the file 1_circuitsPic.png (or 1_circuitsPic.jpg) that contains a picture
+of both circuits. Add that picture file to the hw2 folder in your repository.
+
+You should see the picture file appear under hw2 in the explorer view to the left. When you do 
+git add / git commit / git push as part of submitting your assignment, the picture file should be 
+added to your repository. You will want to double-check in GitHub that your image file appears there.
