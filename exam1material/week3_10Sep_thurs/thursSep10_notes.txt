@@ -34,10 +34,21 @@ Justifications so far:
     Premise
 
     AndI(lhsNum, rhsNum)
+        create an AND statement
+
+        statement1 & statement2
+        need statement 1 on line lhsNum
+        need statement2 on line rhsNum
 
     AndE1(andNum)
+        already have an AND statement: 
+            statement1 & statement 2
+        
+        want to seperate it
+        give me statement1 
 
     AndE2(andNum)
+        same but give me statement2
 
 
 --> what do these look like in programming?
@@ -96,7 +107,9 @@ Or, could have done:
 
 (p ∧ q) ⊢ (p ∨ q)
 Proof(
-    1 ( p ∧ q   ) by Premise,
+    1 ( p ∧ q ) by Premise,
+    2 ( p ) by AndE1(1), 
+    3 ( p | q ) by OrI1(2),  
     
 
 )
@@ -114,7 +127,10 @@ OR elimination
 
 Idea:
 - If an OR statement is true, what do we know?
+    One of the statements is true
 
+    if p | q 
+    know: either p is true or q is true or both are true
 
 
 
@@ -123,6 +139,15 @@ Idea:
 - What if we can reach the same conclusion no matter which side
     of the OR is true?
 
+assume p is the one that's true
+    ...
+    reach conclusion
+
+now assume q is the one that's true
+    ...
+    reach SAME conclusion
+afterwards, can claim the conclusion is true   
+    (because it doesnt matter which of p or q led to it)
 
 
 
@@ -152,7 +177,7 @@ else {
 
 --> what do we know is true here?
 
-
+some result!
 
 
 

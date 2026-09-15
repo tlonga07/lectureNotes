@@ -1,0 +1,16 @@
+//Homework 2
+//5_demorgan.txt
+
+In class, we demonstrated DeMorgan's laws for propositional logic. In each problem, use DeMorgan's laws 
+to write an if-statement whose condition is the negation of the condition in the if-statement below. Write your
+if-statement in such a way that it does not use any ! (not) symbols.
+
+
+DeMorgan's problem 1:
+
+if (a != 8 && str.contains(piece) == false) {
+    //statements
+}
+
+
+Negated condition: (a == 8 || str.contains(piece) != true)
