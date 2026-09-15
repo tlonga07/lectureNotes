@@ -80,6 +80,9 @@ General proof strategy to this point
 
 1) list premises
 2) break down any premises you can to get extra information
+    AND statement - extract both sides
+    IMPLIES - see if already have left or can easily build left side. Then use 
+        ImplyE.
 
 3) look at the conclusion
 
