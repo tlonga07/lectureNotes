@@ -116,24 +116,42 @@ equivalent?
 How to prove propositional logic statements are 
 NOT equivalent?
 
+two truth tables - show that 
 
 What is satisfiability? 
+    I can find at least one truth assignment that makes
+    statement output true
 
+    dont need a full truth table, but could 
 
 To show NOT satisfiable?
+    Need to complete full truth tablewould be contradictory
 
+filling out truth table
+    mark top-level operators 
+    fill in under each operator
+    classify it at the bottom
+        contingent - give truth assignments 
 
 - Determining whether an argument is valid or invalid
     (what is an argument?)
 
+    argument: set of premises, a conclusion 
+        show that premises -> conclusion
 
-    valid: 
+    valid: when can do 
 
 
     how prove valid?
+        truth table: find all truth assignments where every premise is true,
+            make sure conclusion is also true 
+        
+        can use deduction: 
+            premises |- conclusion
 
 
     how prove invalid?
+        find just ONE truth assignment where all premises are true but conclusion is false
 
 
 
