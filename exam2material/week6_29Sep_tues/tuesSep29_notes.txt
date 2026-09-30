@@ -1,0 +1,392 @@
+HW 4 due tonight
+
+HW 5 will be posted after class
+
+/////////////////////////
+
+Today:
+
+- Discuss HW 4 problems 6 and 7
+- Proving theorems
+- Soundness and completeness
+- Begin sets
+
+/////////////////////////
+
+HW 4 problem 6
+
+p → q   equivalent to   ¬p ∨ q
+
+
+p → q  ⊢  ¬p ∨ q
+    try PbC 
+        assume ¬(¬p ∨ q)
+            can we get ¬p ∨ q?
+                try negI to get ¬p
+                    assume p 
+
+
+
+        goal: get a contradiction
+     
+
+
+
+/////////////////////////
+
+HW 4 problem 7
+
+¬(p → q)    equivalent to   p ∧ ¬q
+
+
+¬(p → q)  ⊢  p ∧ ¬q
+    try PbC, assume ¬(p ∧ ¬q)
+        goal: contradiction
+        try to get p → q to contradict with the premise 
+            use ImplyI to try to get it
+
+
+
+
+/////////////////////////
+
+How do we approach proofs?
+
+1. Write out all the premises
+2. Extract all information from premises 
+        AND statement?
+        IMPLIES statement?
+
+
+3. Look at what you are trying to prove 
+    (what do we look for in goal/conclusion?)
+
+    ∧ - try AndI, think of two sides as separate proofs 
+
+    ∨ - see if we can get one of the sides, then use OrI
+        another OR statement - try OrE
+        (always try OrE if possible before PbC)
+
+    → - ALWAYS follow ImplyI pattern 
+
+    ¬(something) - ALWAYS follow NegI pattern
+
+    just a propositional atom? like p.
+        p ∧ q |- p
+        see where it shows up in premises, what we'd need to do
+            to get
+        see if you have an OR, try OrE
+        if nothing else works, try PbC 
+
+
+After each claim - scan previous claims, see if we can extract more
+    information
+
+
+
+Inside a subproof - 
+    (What are the different subproofs?)
+        OrE - both need same conclusion 
+        ImplyI - assume LHS, end with RHS
+        NegI - F
+        PbC - F
+
+    --> when do we open a subproof?
+
+    --> can we assume anything in a subproof? 
+    SubProof(
+        Assume (anything)
+    ),
+    //
+
+    always write your goal for the subproof as a note
+        focus on proving THAT statement, maybe with nested subproofs
+
+
+
+Doesn't fit a pattern or doesn't work out from above?
+    PbC
+
+
+When to use BottomE?
+    get F, conclude anything 
+    use very rarely
+
+
+
+
+//////////////////////////////////
+
+Bigger example: big.sc
+
+//////////////////////////////////
+
+A THEOREM in propositional logic is something that is
+always true with no need for premises. For example:
+
+
+Law of the excluded middle. (LEM)
+
+p ∨ ¬p
+
+
+
+What would a theorem be in a truth table? tautology
+
+
+
+
+Prove LEM (lem.sc):
+
+⊢ ( p ∨ ¬p )               //lem.sc
+
+
+
+⊢ (theorem that you are trying to prove)
+
+/////////////////////////////////
+
+SOUNDNESS and COMPLETENESS of natural deduction in
+    propositional logic
+
+    "provable": prove using natural deduction
+    "true": demonstrate an argument with truth tables
+
+
+SOUNDNESS: if all arguments that are provable are actually true 
+
+p ∧ q 
+--------
+p
+
+
+COMPLETENESS: if all true arguments are provable 
+
+
+
+
+
+--> what would it mean if a proof system was unsound?
+    it would mean I could prove untrue things....baaaad
+
+
+--> what would it mean if a proof system was incomplete?
+    ok...would mean there were true arguments I couldn't prove
+
+
+
+
+
+
+Propositional logic is both SOUND and COMPLETE.
+
+
+
+Using natural deduction to prove the sequent:
+    P1, P2, ..., Pn ⊢ q
+
+
+Is equivalent to using truth tables to show that whenever
+    P1, P2, ..., Pn
+are true, then q is also true
+
+//////////////////////////////////////
+
+(in-class quiz)
+
+//////////////////////////////////////
+
+Sets.
+
+A set is an unordered collection of elements
+
+
+{1,1,3,5,7} = {1,3,5,7} = {7,3,1,5}
+
+
+
+∈: is in, exists in
+
+    x ∈ A  means? x exists (is an element in) set A
+
+    x ∉ A  means? x does not exist (is not an element in) set A
+
+
+
+Example: A = {1,4,7,11,20}
+
+    1 ∈ A 
+    2 ∉ A
+
+
+
+- Common sets in math:
+
+    ℕ: natural numbers (integers 1 and bigger)
+    ℤ: whole numbers (all integers)
+    ℚ: rational numbers (written as a fraction)
+    ℝ: real numbers (can be represented on the number line)
+    ℂ: complex numbers (can be written as a + bi)
+    ∅: empty set, {}
+
+ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ
+
+⊂: subset 
+
+////////////////////////////////////
+
+Set builder notation.
+
+: means, where, such that
+| means the same thing
+
+{variable : conditions}
+
+
+{x: x ∈ ℕ, 5 ≤ x ≤ 10}
+
+{5,6,7,8,9,10}
+
+
+
+{k : k is a letter in "abracadabra"}
+
+{a, b, c, r, d}
+
+
+{x : x = 2k,  k ∈ ℕ}
+all positive evens
+{2, 4, 6, etc.}
+
+
+
+{n : n = k^2, k ∈ Z}
+perfect squares 
+{0, 1, 4, 9, ...}
+
+
+{n : n = 3a + 1, a ∈ ℕ, 1 ≤ a ≤ 4}
+
+{ 4, 7, 10, 13 }
+
+//////////////////////////////////////
+
+<-- stopped here, will continue Thursday
+
+//////////////////////////////////////
+
+
+
+Describe these sets in set builder notation
+
+
+{5,10,15}
+
+
+
+{CIS 115, CIS 200, CIS 300, CIS 301}
+
+
+
+{2,4,8,16,32}
+
+
+///////////////////////////////////////
+∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ     ≠ ≤ ≥
+
+///////////////////////////////////////
+
+Set union, ⋃
+
+The union of the sets A and B, written A ⋃ B, is the set
+of all elements....?
+
+
+How could we express in set builder notation?
+
+A ⋃ B =
+
+
+//////////////////////////////////////
+⋃ ⋂ ⋁ ⋀ ∈ ∉
+///////////////////////////////////////
+
+Set intersection, ⋂
+
+The intersection of the sets A and B, written A ⋂ B, is the set
+of all elements that are...?
+
+
+How could we express in set builder notation?
+
+A ⋂ B =
+
+///////////////////////////////////////
+
+Set difference,
+
+/ or \ (means the same thing)
+
+The difference between the sets A and B, written A - B, is the set
+of all elements...?
+
+
+How could we express in set builder notation?
+
+A - B =
+
+//////////////////////////////////////
+⋃ ⋂ ⋁ ⋀ ∈ ∉
+///////////////////////////////////////
+
+A = {1,3,7,10,11,12}
+
+B = {2,3,4,5,6,7}
+
+
+Find:
+
+A ⋃ B =
+
+A ⋂ B =
+
+A - B =
+
+B - A =
+
+
+//////////////////
+
+Subset - A is a subset of B, written A ⊆ B, if
+    all elements in A are also in B.
+
+(We say A ⊂ B if A is a subset of B but A ≠ B.)
+
+
+
+
+Example:
+
+A = {1,3,4}
+
+B = {1,3,5,8}
+
+--> is A a subset of B?
+
+
+
+A = {8,1,3}
+
+B = {1,3,5,8}
+
+--> is A a subset of B?
+
+
+
+//////////////////////////////////
+
+Next time:
+- quantifiers
+- proofs with sets
+- limitations of propositional logic
+- intro to predicate logic
