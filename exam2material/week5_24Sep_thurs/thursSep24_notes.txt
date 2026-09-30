@@ -61,7 +61,9 @@ Bottom-elimination:
 BottomE:  ----------
                Q
 
+argument: premises -> conclusion
 
+F -> Q
 //how does this make logical sense?
 
 (think about what we are proving with an argument)
@@ -73,6 +75,11 @@ Proof(
     1 ( p ∧ q )     by Premise,
     2 ( q → ¬p )    by Premise,
 
+    3 ( p ) by AndE1(1),
+    4 ( q ) by AndE2(1),
+    5 ( !p ) by ImplyE(2, 4),
+    6 ( F ) by NegE(3, 5),
+    7 ( put anything ) by BottomE(6)
 )
 
 
@@ -96,6 +103,16 @@ PbC:  -------------------
 ( ¬¬p ) ⊢ ( p )
 Proof(
     1 ( ¬¬p )   by Premise,
+
+    2 SubProof(
+        3 Assume ( !p ),
+        4 ( F ) by NegE(3, 1)
+    )
+
+    5 ( p ) by PbC( 2 )
+    
+    
+    //goal: p using PbC
 
 )
 
@@ -124,6 +141,17 @@ Conclusion?
 Proof(
     1 ( p ∨ q )     by Premise,
     2 ( ¬p )        by Premise,
+    
+    3 SubProof(
+        4 Assume ( p ),
+        5 ( F ) by NegE(4, 2)
+        6 ( q ) by BottomE(5)
+        //goal: q
+    ),
+    7 SubProof(
+        8 Assume ( q )
+    )
+    9 ( q ) by OrE(1, 3, 7)
 
 )
 
