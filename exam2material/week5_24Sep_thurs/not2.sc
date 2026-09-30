@@ -8,32 +8,31 @@ import org.sireum.justification.natded.prop._
   Deduce(
     ( !p & !q ) |- ( !(p | q)  )
       Proof(
-        1 ( !p & !q ) by Premise,
+        1 (  !p & !q ) by Premise,
         2 ( !p ) by AndE1(1),
         3 ( !q ) by AndE2(1),
-        
+
         4 SubProof(
-          5 Assume(p | q ),
-          
-          //use orE on p | q
+          5 Assume(p | q),
+
+          //use OrE on p | q
           6 SubProof(
-            7 Assume (p),
+            7 Assume ( p ),
             8 ( F ) by NegE(7, 2)
-          )
 
+            //goal: F
+          ),
           9 SubProof(
-            10 Assume (q),
+            10 Assume ( q ),
             11 ( F ) by NegE(10, 3)
-          )
+          ),
+          12 ( F ) by OrE(5, 6, 9)
 
-          13 ( !(p | q ) by NegI(4))
+          //goal: F
+        ),
+        13 ( !(p | q) ) by NegI(4)
 
-
-        )
-
-
-        //use NegI to build conlucsion ! ( p | q)
-
+        //use NegI to build the conclusion !(p | q)
     )
   )
 }

@@ -13,20 +13,22 @@ import org.sireum.justification.natded.prop._
         2 SubProof(
           3 Assume( p ),
 
-          //doesnt fit any patters, try pbc
+          //doesn't fit any patterns, try PbC
 
           4 SubProof(
             5 Assume ( !q ),
-            6 ( !p ) by ImplyE(1, 5)
+            6 ( !p ) by ImplyE(1, 5),
             7 ( F ) by NegE(3, 6)
 
             //goal: F
           ),
           8 ( q ) by PbC(4)
-        )
-        9 ( p -> q ) by 
-        //use ImplyI to create p -> q
+          //use PbC
 
+          //goal: q
+        ),
+        9 ( p __>: q ) by ImplyI(2)
+        //use ImplyI to create p __>: q
     )
   )
 }
