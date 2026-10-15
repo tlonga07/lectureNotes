@@ -1,0 +1,56 @@
+Evaluate each of the following predicate logic statements on the specified domain.
+Write "true" if the statement is true in the specified domain, and write "false" otherwise.
+Explain your answer.
+
+
+
+1) Domain: ℤ
+    Statement: ∀ m ∃ n (m < 2n)
+
+
+TRUE
+
+ can always choose n if big enough.
+
+
+///////////////////////////////////////////////////////
+
+2) Domain: ℤ
+    Statement: ∃ n ∃ m (n^2 + m^2 = 10)
+
+
+TRUE
+
+1^2 + 3^2 = 10
+
+
+///////////////////////////////////////////////////////
+
+3) Domain: ℤ
+    Statement: ∃ n ∃ m (n^2 + m^2 = 7)
+
+FALSE
+
+
+No two integer squares add to 7
+
+///////////////////////////////////////////////////////
+
+4) Domain: ℝ (the set of real numbers)
+    Statement: ∀ x ∃ y (x^2 = y)
+
+TRUE
+
+All real number has a square.
+
+
+
+///////////////////////////////////////////////////////
+
+5) Domain: ℝ (the set of real numbers)
+    Statement: ∀ x ∃ y (x = y^2)
+
+    FALSE
+
+    Negative real numbers cannot be squares of real numbers.
+    

@@ -1,0 +1,70 @@
+Here are some symbols, if needed
+∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ ℝ ℚ     ≠ ≤ ≥
+
+Domain: people
+    P(x): person x is a programmer
+    R(x): person x plays rugby
+    D(x): person x has a dog
+    M(x, y): person x is the manager of person y
+
+
+In each of the following problems:
+    - Express the statement in English, using the predicates above
+    - Negate the statement, so that:
+        - There is no negation to the left of a quantifier
+        - There is no negation of a parenthetical ( ) expression
+        - If your final negation contains a ∀ statement followed by an ⋁,
+                rewrite it to use → instead of ⋁
+    - Show your work for partial credit
+
+
+1) ∀ x (P(x) → D(x))
+
+Expressed in English:There is a programmer who does not have a dog.
+
+∃x(P(x) & !D(x))
+
+
+Predicate logic negation:
+∃x(P(x) & !D(x))
+
+
+
+///////////////////////////////////////////
+
+2) ∃ y (R(y) ⋀ ¬P(y))
+
+Expressed in English: Everyone who plays rugby is a programmer.
+
+
+
+
+Predicate logic negation:
+
+∀y(R(y) --> P(y) )
+
+
+///////////////////////////////////////////
+
+3) ∃ x ∃ y (D(x) ⋀ M(x, y))
+
+Expressed in English:
+nobody who has a dog manages anyone
+
+
+
+Predicate logic negation:
+∀x∀y(D(x) --> !M(x, y))
+
+
+
+///////////////////////////////////////////
+
+4) ∀ x ∃ y (P(x) → M(x, y) ⋀ R(y))
+
+Expressed in English:
+
+there is a programmer who does not manage anyone who plays rugby.
+
+
+Predicate logic negation: ∀y∃x (P(x) & (!M(x, y) | !R(y)))
