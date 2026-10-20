@@ -91,6 +91,7 @@ Syntax:
 
 --> Think of ExistsE like OrE
     ∃ x P(x) means...? 
+    P(x) is true at somepount 
 
 
 Use ExistsE in the SAME situations you would use OrE
