@@ -1,0 +1,27 @@
+
+Use mathematical induction to prove that the sum of the first n even natural numbers equals n(n+1).
+That is, that:
+
+    2 + 4 + ... + 2n = n(n+1)
+    
+    if n = 3 both sides true
+
+(Note that we are considering "2" to be the first even natural number.)
+
+P(n) is:  2 + 4 + ... + 2n = n(n+1)
+ 
+Base case/Prove n = 1: 
+LHS = 2 & RHS = 1(1+1) = 2
+2 = 2 
+Base case good! P(1) Holds
+
+Inductive step: 
+Assume P(k) holds for k 
+2 + 4 + ... + 2k = k(k+1)
+
+LHS P(k+1)
+2+4+6+...+2k +2(k+1)
+= (2 + 4 + 6 + ... + 2k) + 2(k+ 1)
+= k(k+1) + 2(k+1)
+= (k+1)(k+2) 
+Prove P(k + 1)
