@@ -1,0 +1,31 @@
+Use mathematical induction to prove that if n is a positive integer, then
+n^5 - n is divisible by 5.
+
+P(n) is: n^5 - n is divisible by 5.
+
+Base case/Prove n = 1:
+
+1^5 - 1 = 0
+
+0 is divisible by 5 since 0 = 5(0).
+
+Base case good! P(1) holds.
+
+Inductive step:
+
+Assume P(k) holds for k.
+
+k^5 - k = 5m for some integer m.
+
+LHS P(k+1)
+(k+1)^5 - (k+1)
+= k^5 + 5k^4 + 10k^3 + 10k^2 + 5k + 1 - k - 1
+= (k^5 - k) + 5k^4 + 10k^3 + 10k^2 + 5k
+= 5m + 5k^4 + 10k^3 + 10k^2 + 5k
+= 5(m + k^4 + 2k^3 + 2k^2 + k)
+
+Since everything inside the parentheses is an integer, the expression is divisible by 5.
+
+Proved P(k+1)!
+
+Since P(1) holds and P(k) implies P(k+1), n^5 - n is divisible by 5 for all positive integers n.
