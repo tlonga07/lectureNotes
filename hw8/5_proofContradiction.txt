@@ -1,0 +1,29 @@
+//Homework 8
+//5_proofContradiction.txt
+
+
+Use proof by contradiction to prove the following proposition:
+
+The sum of an irrational and a rational number is irrational.
+
+P = x is irrational and y is rational
+Q = x + y is irrational
+
+Contridiction:
+Assume x + y is rational and x is irrational and y is rational
+
+a/b when b is a non zero integer is a rational number
+
+x + y = a/b 
+y is rational so y = c/d  where d is a non zero int
+
+x = a/b - y 
+= a/b - c/d 
+= ad - bc/bd  
+
+Since a,b,c,d are all int, ad - bc and bd are also integers. bd != 0 since b and d are nonzero.
+This would make x rational, but x can't be rational by our assumption, making a contridiciton.
+x + y being rational must be false, so x + y is irrational. 
+
+
+

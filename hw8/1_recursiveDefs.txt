@@ -1,0 +1,64 @@
+//Homework 8
+//1_recursiveDefs.txt
+
+
+1) Give a recursive definition of the function f(n) = 4n-2, where n ∈ ℕ:
+
+(Hint: first write out what pattern it produces.)
+
+f(1) = 2, f(2) = 6, f(3) = 10, f(4) = 14
+
+Base case: f(1) = 2
+Recursive function: f(n) = f(n-1) + 4, n >= 2
+
+
+
+///
+
+2) Give a recursive definition of the set S of positive integers that are one more than a multiple of 5. 
+For example, 6, 26, and 21 will all be in the set.
+
+(Hint: 0 is a multiple of 5.)
+
+S = {6, 21, 26}
+
+
+Base case:
+1 ∈ S
+Recursive set: 
+x ∈ S --> x+5 ∈ S
+If x in set, then x + 5 in set
+
+
+S = {x: x = 5n + 1, n ∈ ℕ, n >= 0}
+
+
+
+
+
+
+///
+
+3) Give a recursive definition of the function Sum(n), where Sum(n) is the sum of the first n positive integers:
+
+Sum(n) is sum of all preceding int
+Base case:
+Sum(1) = 1
+
+Recursive case:
+Sum(n) = Sum(n-1) + n, n > 1
+
+
+
+
+
+///
+
+4) Give a recursive definition of the function Product(m, n), where Product(m, n) is the product of
+the integer m and the nonnegative integer n:
+
+Base case: 
+Product(m, 0) = 0
+
+Recursive Case: 
+Product(m, n) = Product(m, n-1) + m, n > 0

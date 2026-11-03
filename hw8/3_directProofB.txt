@@ -1,0 +1,24 @@
+//Homework 8
+//3_directProofB.txt
+
+
+Use a direct proof to prove the following proposition:
+
+If x and y are even integers and z is an odd integer, then xyz is even.
+
+Proof: 
+If x and y are even integers and z is an odd integer,
+
+Then
+x = 2(k) for some k
+y = 2(m) for some m
+z = 2(o) + 1 for some o
+
+xyz = 2(k) * 2(m) * (2(o) + 1)
+
+= 4(km) * (2(o) + 1)
+= 4(km)(2(o)) + 4(km)(1)
+= 8(kmo) + 4(km)
+= 2(4(kmo) + 2(km))
+
+k m and o are all itegers, so (4(kmo) + 2(km)) is an integer. 2(integer) is even!, thus, xyz is even.

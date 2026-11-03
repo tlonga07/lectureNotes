@@ -1,0 +1,4 @@
+//Homework 8
+//6_proofSet.txt
+
+Prove that {x : x = 4k + 5, k ∈ Z} = {x : x = 4k + 1, k ∈ Z}
