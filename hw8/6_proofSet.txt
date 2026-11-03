@@ -2,3 +2,35 @@
 //6_proofSet.txt
 
 Prove that {x : x = 4k + 5, k ∈ Z} = {x : x = 4k + 1, k ∈ Z}
+
+A = {x : x = 4k + 5, k ∈ Z}
+B = {x : x = 4k + 1, k ∈ ℤ}
+
+Prove that A ⊆ B and B ⊆ A (subsets of one another)
+
+A ⊆ B:
+x ∈ A
+x = 4k + 5 for some integer k.
+x = 4k + 5
+= 4k + 4 + 1
+= 4(k + 1) + 1
+
+Since k is an integer, k + 1 is also an integer.
+Let a = k + 1.
+Then x = 4a + 1, so x ∈ B.
+Therefore, A ⊆ B.
+
+B ⊆ A:
+x ∈ B
+x = 4k + 1 for some integer k
+x = 4k + 1
+= 4k - 4 + 5
+= 4(k - 1) + 5
+k is int, so k-1 is also int
+
+Let a = k - 1.
+x = 4a + 5, so x ∈ A.
+Therefore, B ⊆ A
+
+
+A ⊆ B and B ⊆ A, so A = B.
