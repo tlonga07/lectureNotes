@@ -78,19 +78,21 @@ Deduce(
     7 (small == 6 | small == num2) by Subst_<(1, 5),
     8 ( small == 6 | small == 4) by Subst_<(2, 7), 
     
-    9 (small == 4) by OrE(8,
-        Deduce(
-            1 Assume ( small == 6 ),
-            2 (small > 4) by Algebra*(1),
-            3 (F) by Algebra*(6, 2),
-            4 (small == 4) by BottomE(3)
+    9 SubProof(
+        10 Assume(small == 6),
+        11 SubProof(
+            12 Assume ( !(small ==4 ) ),
+            13 ( F ) by Algebra*(6, 10)
+        ),
+        14 ( small == 4 ) by PbC(11)
     ),
-        Deduce(
-            1 Assume ( small == 4 ),
-            2 (small == 4 ) by Premise
-        )
+    15 SubProof(
+        16 Assume ( small == 4 ),
+        17 ( small == 4 ) by Premise
+    ),
+    18 ( small == 4 ) by OrE(8, 9, 15)
 
-    )
+    
         
     
 
